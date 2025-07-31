@@ -1,0 +1,172 @@
+ /* Component Specific Styles */
+
+/* Glass Effect */
+.glass-effect {
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  
+  /* Custom Shadow */
+  .custom-shadow {
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  }
+  
+  /* Gradient Backgrounds */
+  .gradient-bg {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  }
+  
+  .gradient-warm {
+    background: linear-gradient(135deg, #2c1810 0%, #8B6F47 50%, #F5F5DC 100%);
+  }
+  
+  .gradient-blue-chair {
+    background: linear-gradient(135deg, #4A90E2 0%, #2171b5 100%);
+  }
+  
+  .gradient-yellow-chair {
+    background: linear-gradient(135deg, #F4D03F 0%, #f1c40f 100%);
+  }
+  
+  .gradient-orange-chair {
+    background: linear-gradient(135deg, #ff7f50 0%, #ff6347 100%);
+  }
+  
+  /* Bonsai Tree Background */
+  .bonsai-bg {
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><radialGradient id="grad" cx="50%" cy="50%" r="50%"><stop offset="0%" style="stop-color:%23228B22;stop-opacity:1" /><stop offset="100%" style="stop-color:%23006400;stop-opacity:1" /></radialGradient></defs><circle cx="50" cy="70" r="15" fill="url(%23grad)"/><rect x="48" y="70" width="4" height="20" fill="%238B4513"/></svg>');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 60px 60px;
+  }
+  
+  /* Navigation Styles */
+  .nav-blur {
+    backdrop-filter: blur(12px);
+    background: rgba(255, 255, 255, 0.9);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Button Styles */
+  .btn-primary {
+    @apply bg-warm-brown text-white px-6 py-3 rounded-full font-medium transition-all duration-300 hover:bg-dark-brown hover:scale-105;
+  }
+  
+  .btn-secondary {
+    @apply bg-white text-warm-brown px-6 py-3 rounded-full font-medium transition-all duration-300 hover:bg-gray-100 hover:scale-105;
+  }
+  
+  .btn-ghost {
+    @apply text-warm-brown hover:text-dark-brown transition-colors duration-300 font-medium;
+  }
+  
+  /* Card Styles */
+  .card-elevated {
+    @apply bg-white rounded-3xl p-8 custom-shadow hover-lift;
+  }
+  
+  .card-warm {
+    @apply bg-warm-brown text-white p-12 rounded-3xl custom-shadow;
+  }
+  
+  .card-dark {
+    @apply bg-dark-brown text-white p-12 rounded-3xl custom-shadow;
+  }
+  
+  /* Product Card Styles */
+  .product-card {
+    @apply bg-gradient-to-br from-gray-50 to-gray-100 rounded-3xl p-8 relative overflow-hidden hover-lift;
+  }
+  
+  .product-chair {
+    @apply w-32 h-32 rounded-2xl relative;
+  }
+  
+  .product-chair::before {
+    content: '';
+    @apply absolute inset-4 bg-white/20 rounded-xl;
+  }
+  
+  .product-chair::after {
+    content: '';
+    @apply absolute bottom-4 left-4 right-4 h-8 bg-gradient-to-t from-black/20 to-transparent rounded-lg;
+  }
+  
+  /* Stats Card Styles */
+  .stats-card {
+    @apply bg-warm-brown text-white p-12 rounded-3xl custom-shadow scale-in;
+  }
+  
+  .stats-icon {
+    @apply w-16 h-16 bg-white/20 rounded-full flex items-center justify-center;
+  }
+  
+  /* Hero Mockup Styles */
+  .hero-mockup {
+    @apply relative bg-white/10 backdrop-blur-md rounded-3xl p-8 border border-white/20;
+  }
+  
+  .hero-grid {
+    @apply grid grid-cols-2 gap-4 mb-6;
+  }
+  
+  .hero-item {
+    @apply h-24 rounded-2xl;
+  }
+  
+  .hero-accessories {
+    @apply flex items-center justify-between mb-4;
+  }
+  
+  .hero-vases {
+    @apply flex space-x-2;
+  }
+  
+  .hero-vase {
+    @apply rounded-full;
+  }
+  
+  .hero-content {
+    @apply bg-white/20 rounded-2xl p-6;
+  }
+  
+  /* Responsive Utilities */
+  @media (max-width: 768px) {
+    .hero-mockup {
+      @apply p-4;
+    }
+    
+    .card-elevated, .card-warm, .card-dark {
+      @apply p-6;
+    }
+    
+    .product-card {
+      @apply p-6;
+    }
+  }
+  
+  /* Animation Performance */
+  .gpu-accelerated {
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+  }
+  
+  /* Loading States */
+  .skeleton {
+    @apply animate-pulse bg-gray-300 rounded;
+  }
+  
+  .skeleton-text {
+    @apply h-4 bg-gray-300 rounded w-full mb-2;
+  }
+  
+  .skeleton-title {
+    @apply h-6 bg-gray-300 rounded w-3/4 mb-4;
+  }
+  
+  /* Focus States */
+  .focus-ring {
+    @apply focus:outline-none focus:ring-2 focus:ring-warm-brown focus:ring-offset-2;
+  }
